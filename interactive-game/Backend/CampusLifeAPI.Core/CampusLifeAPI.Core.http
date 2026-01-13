@@ -1,0 +1,6 @@
+@CampusLifeAPI.Core_HostAddress = http://localhost:5225
+
+GET {{CampusLifeAPI.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

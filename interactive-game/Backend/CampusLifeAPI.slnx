@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CampusLifeAPI.Application/CampusLifeAPI.Application.csproj" />
+  <Project Path="CampusLifeAPI.Core/CampusLifeAPI.Core.csproj" />
+  <Project Path="CampusLifeAPI.Domain/CampusLifeAPI.Domain.csproj" />
+  <Project Path="CampusLifeAPI.Infrastructure/CampusLifeAPI.Infrastructure.csproj" />
+</Solution>

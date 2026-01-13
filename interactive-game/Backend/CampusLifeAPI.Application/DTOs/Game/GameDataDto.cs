@@ -21,6 +21,6 @@ namespace CampusLifeAPI.Application.DTOs.Game
         public int Grade { get; set; }
         public int Semester { get; set; }
         public int Day { get; set; }
-        public string CurrentTaskId { get; set; }
+        public string CurrentTaskId { get; set; } = string.Empty;
     }
 }

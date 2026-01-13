@@ -14,10 +14,7 @@ namespace CampusLifeAPI.Domain.Entities
         public DateTime? LastLoginAt { get; set; }
         public bool IsActive { get; set; }
         
-        // 导航属性
-        public virtual UserProfile Profile { get; set; }
+        // 简化：只保留必要的一对一关系
         public virtual GameData GameData { get; set; }
-        public virtual ICollection<GameTask> Tasks { get; set; }
-        public virtual ICollection<UserAchievement> Achievements { get; set; }
     }
 }

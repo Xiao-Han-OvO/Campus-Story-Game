@@ -1,0 +1,12 @@
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.AssemblyInfoInputs.cache
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.AssemblyInfo.cs
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.csproj.CoreCompileInputs.cache
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.sourcelink.json
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/bin/Debug/net10.0/CampusLifeAPI.Domain.deps.json
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/bin/Debug/net10.0/CampusLifeAPI.Domain.dll
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/bin/Debug/net10.0/CampusLifeAPI.Domain.pdb
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.dll
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/refint/CampusLifeAPI.Domain.dll
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/CampusLifeAPI.Domain.pdb
+/workspaces/Campus-Story-Game/interactive-game/Backend/CampusLifeAPI.Domain/obj/Debug/net10.0/ref/CampusLifeAPI.Domain.dll

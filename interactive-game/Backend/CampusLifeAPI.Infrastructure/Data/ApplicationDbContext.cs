@@ -1,4 +1,3 @@
-// CampusLifeAPI.Infrastructure/Data/ApplicationDbContext.cs
 using CampusLifeAPI.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,7 +27,7 @@ namespace CampusLifeAPI.Infrastructure.Data
                 entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.PasswordHash).IsRequired();
                 entity.Property(e => e.DisplayName).HasMaxLength(100);
-                entity.Property(e => e.CreatedAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
             
             // 配置GameData实体
@@ -43,7 +42,7 @@ namespace CampusLifeAPI.Infrastructure.Data
                 entity.Property(e => e.Grade).HasDefaultValue(1);
                 entity.Property(e => e.Semester).HasDefaultValue(1);
                 entity.Property(e => e.Day).HasDefaultValue(1);
-                entity.Property(e => e.UpdatedAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
         }
     }

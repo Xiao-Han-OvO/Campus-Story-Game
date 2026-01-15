@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CampusLifeAPI.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68b5e45f844c32eec1c830bad450b2310d8e1f74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b18b95135d200132b00cad38e0fcc0361b9a48b")]
 [assembly: System.Reflection.AssemblyProductAttribute("CampusLifeAPI.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CampusLifeAPI.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

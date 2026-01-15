@@ -1,4 +1,3 @@
-// CampusLifeAPI.Core/Controllers/AuthController.cs
 using CampusLifeAPI.Application.DTOs.Auth;
 using CampusLifeAPI.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +9,12 @@ namespace CampusLifeAPI.Core.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly ILogger<AuthController> _logger;
         
-        public AuthController(IUserService userService)
+        public AuthController(IUserService userService, ILogger<AuthController> logger)
         {
             _userService = userService;
+            _logger = logger;
         }
         
         [HttpPost("register")]
@@ -21,15 +22,16 @@ namespace CampusLifeAPI.Core.Controllers
         {
             try
             {
+                _logger.LogInformation("注册请求: {Username}", registerDto.Username);
                 var result = await _userService.RegisterAsync(registerDto);
                 
-                // 设置Cookie（可选，如果您想用Cookie存储Token）
+                // 设置Cookie
                 var cookieOptions = new CookieOptions
                 {
                     HttpOnly = true,
                     Expires = result.Expires,
                     SameSite = SameSiteMode.Lax,
-                    Secure = false // 开发环境为false，生产环境应为true
+                    Secure = false
                 };
                 
                 Response.Cookies.Append("auth_token", result.Token, cookieOptions);
@@ -43,10 +45,13 @@ namespace CampusLifeAPI.Core.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "注册失败: {Message}", ex.Message);
                 return BadRequest(new
                 {
                     success = false,
-                    message = ex.Message
+                    message = ex.Message,
+                    innerException = ex.InnerException?.Message,
+                    stackTrace = ex.StackTrace
                 });
             }
         }
@@ -58,7 +63,6 @@ namespace CampusLifeAPI.Core.Controllers
             {
                 var result = await _userService.LoginAsync(loginDto);
                 
-                // 设置Cookie
                 var cookieOptions = new CookieOptions
                 {
                     HttpOnly = true,

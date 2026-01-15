@@ -1,4 +1,6 @@
+using CampusLifeAPI.Application.Interfaces;
 using CampusLifeAPI.Infrastructure.Data;
+using CampusLifeAPI.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +12,11 @@ builder.Services.AddSwaggerGen();
 
 // 配置数据库上下文
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// 注册应用服务
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IGameDataService, GameDataService>();
 
 // 添加CORS
 builder.Services.AddCors(options =>
@@ -38,5 +44,12 @@ app.UseHttpsRedirection();
 app.UseCors("VueAppPolicy");
 app.UseAuthorization();
 app.MapControllers();
+
+// 确保数据库创建
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.EnsureCreated();
+}
 
 app.Run();

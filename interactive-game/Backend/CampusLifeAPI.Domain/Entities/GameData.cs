@@ -1,4 +1,3 @@
-// CampusLifeAPI.Domain/Entities/GameData.cs
 namespace CampusLifeAPI.Domain.Entities
 {
     public class GameData
@@ -24,14 +23,14 @@ namespace CampusLifeAPI.Domain.Entities
         public int Learning { get; set; } = 10;
         
         // 游戏进度
-        public int Grade { get; set; } = 1; // 年级 1-3
-        public int Semester { get; set; } = 1; // 学期 1-2
-        public int Day { get; set; } = 1; // 游戏内天数
-        public string CurrentTaskId { get; set; }
+        public int Grade { get; set; } = 1;
+        public int Semester { get; set; } = 1;
+        public int Day { get; set; } = 1;
+        public string? CurrentTaskId { get; set; } // 改为可为空
         
         public DateTime UpdatedAt { get; set; }
         
         // 导航属性
-        public virtual User User { get; set; }
+        public virtual User? User { get; set; }
     }
 }

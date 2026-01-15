@@ -1,4 +1,3 @@
-// CampusLifeAPI.Application/DTOs/Game/GameDataDto.cs
 namespace CampusLifeAPI.Application.DTOs.Game
 {
     public class GameDataDto
@@ -21,6 +20,6 @@ namespace CampusLifeAPI.Application.DTOs.Game
         public int Grade { get; set; }
         public int Semester { get; set; }
         public int Day { get; set; }
-        public string CurrentTaskId { get; set; } = string.Empty;
+        public string? CurrentTaskId { get; set; } = string.Empty; // 改为可为空
     }
 }
